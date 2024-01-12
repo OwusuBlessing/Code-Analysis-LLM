@@ -8,7 +8,7 @@ __pycache__/
 
 venv/
 menv/
-
+Selected_Repo/
 #env variables
 .env
 

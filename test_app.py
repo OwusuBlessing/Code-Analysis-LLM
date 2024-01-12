@@ -9,8 +9,8 @@ from github_fetch.fetch_file_contents import fetch_and_save_contents
 from github_fetch.fetch_repos import fetch_repo_names
 from config import DOWNLOAD_REPO_DIRECTORY
 from utils.common import delete_and_create_folder
-from openai_st.stage01_extract_indivdual_code_file import read_code_file,create_individual_document,process_folder_for_individual_docs
-from openai_st.stage02_generate_review_from_prompt import get_review
+from openai_connect.stage01_extract_indivdual_code_file import read_code_file,create_individual_document,process_folder_for_individual_docs
+from openai_connect.stage02_generate_review_from_prompt import get_review
 from dotenv import load_dotenv
 import os
 load_dotenv()
@@ -80,7 +80,7 @@ async def process_selected_repo(request: Request,selected_repo: str = Form(...))
 @app.get("/review", response_class=HTMLResponse)
 async def review(request:Request):
     docs = process_folder_for_individual_docs(DOWNLOAD_REPO_DIRECTORY)
-    x = [docs[1]]
-    reviews = get_review(all_docs=x)
+    #x = [docs[1]]
+    reviews = get_review(all_docs=docs)
     return templates.TemplateResponse("review.html", {"request": request, "reviews": reviews})
 

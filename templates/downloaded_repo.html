@@ -1,0 +1,31 @@
+<!-- templates/downloaded_repo.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository Downloaded</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="alert alert-success" role="alert">
+            Repository '<strong>{{selected_repo }}</strong> contents downloaded successfully.
+        </div>
+        <p>Downloaded to: {{ download_directory }}</p>
+        <button class="btn btn-primary" onclick="redirectToReview()">Review code present in repository</button>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function redirectToReview() {
+            window.location.href = "/review";
+        }
+    </script>
+</body>
+</html>

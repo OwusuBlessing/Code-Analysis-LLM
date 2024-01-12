@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+httpx
+starlette
+openai
+faiss-cpu
+langchain
+langchain-community
+langchain-core
+langchain-openai
+tiktoken
+python-multipart
+markupsafe==2.0.1
+python-dotenv
+Jinja2

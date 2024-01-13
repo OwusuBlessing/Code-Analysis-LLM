@@ -16,6 +16,7 @@ import os
 load_dotenv()
 
 app = FastAPI()
+
 templates = Jinja2Templates(directory="templates")
 
 github_login_client_id=os.getenv("GITHUB_CLIENT_ID")
@@ -80,7 +81,6 @@ async def process_selected_repo(request: Request,selected_repo: str = Form(...))
 @app.get("/review", response_class=HTMLResponse)
 async def review(request:Request):
     docs = process_folder_for_individual_docs(DOWNLOAD_REPO_DIRECTORY)
-    #x = [docs[1]]
     reviews = get_review(all_docs=docs)
     return templates.TemplateResponse("review.html", {"request": request, "reviews": reviews})
 

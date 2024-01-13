@@ -140,7 +140,7 @@ IntelliReview requires GitHub integration:
 Clone IntelliReview to your local machine:
 
 ```sh
-git clone https://github.com/OwusuBlessing/Langchain-Project.git
+git clone https://github.com/OwusuBlessing/Code-Analysis-LLM.git
 cd Langchain-Project
 
 

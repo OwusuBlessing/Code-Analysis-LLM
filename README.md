@@ -171,7 +171,11 @@ open `.env` file  and paste your tokens
    GITHUB_SECRET_KEY="Enter your gthub secret key"
 
    ```
-
+To launch the application, open your terminal and enter the following command:
+```
+uvicorn test_app:app --reload
+```
+This will initiate a local server, allowing you to access the application through your web browser."
 <!-- USAGE EXAMPLES -->
 ## Usage
 

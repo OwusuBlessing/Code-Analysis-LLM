@@ -25,7 +25,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">roject DescriptionP</a>
+      <a href="#about-the-project">Project Description</a>
       <ul>
         <li><a href="#features">Features</a></li>
         <ul>

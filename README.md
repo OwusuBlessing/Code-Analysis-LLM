@@ -18,7 +18,35 @@
   
 </div>
 
+## Folder Structure
 
+The project follows a structured organization with the following directories:
+
+```plaintext
+project_root/
+│
+├── github_fetch/
+│   ├── fetch_repos.py
+│   └── fetch_file_content.py
+│
+├── openai_connect/
+│   ├── stage01_extract_individual_code_file.py
+│   ├── stage02_generate_review_from_prompt.py
+│
+├── utils/
+│   └── common.py
+│
+├── templates/
+│   ├── home.html
+│   └── ... (other HTML files)
+│
+├── config.py
+│
+├── test_app.py
+│
+├── requirements.txt
+
+```
 
 <!-- TABLE OF CONTENTS -->
 <details>
